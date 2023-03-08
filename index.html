@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Noorem tarkvaraarendaja, tutvu minu e-portfoolioga" />
+  <meta name="keywords"
+    content="Karl Kaarel Taniel Seppel, Karl Kaarel, Karl Kaarel Taniel, Seppel, portfoolio, e-portfoolio" />
+  <meta name="author" content="Karl Kaarel Taniel Seppel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/4b19ed377c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/avaleht.css">
+  <link rel="stylesheet" href="/combined.css">
+  <title>K.K.T.Seppel E-Portfoolio</title>
+</head>
+
+<body class="preload">
+  <!-- LOADING LOGO -->
+  <div class="loadingLogo"><img src="/Logod/Minulogo_animated.svg" /></div>
+  <!-- HOMEPAGE -->
+  <section id="homePage">
+    <!-- NAVIGATION BAR -->
+    <div class="navbar">
+      <a href="avalehtEST.html"><img id="logoId" src="/Logod/Minulogo_animated.svg" alt="LOGO"></a>
+      <div class="navMenu">
+        <ul>
+          <li><a href="#home">Avaleht</a></li>
+          <li><a href="#aboutMe">Minu Hobid</a></li>
+          <li><a href="#contactMe">Kontakt</a></li>
+          <li><a href="/CV/CVEST.html">CV</a></li>
+        </ul>
+      </div>
+      <div class="pageTop">
+        <h2 class="currentPage"><a href="avalehtEST.html">Avaleht</a></h2>
+        <a href="avalehtENG.html"><img
+            src="https://img.freepik.com/premium-vector/vintage-grunge-uk-flag_1102-1207.jpg?w=2000"></a>
+      </div>
+    </div>
+    <!-- INTRO AND DONE WORK -->
+    <div class="container" id="home">
+      <div class="leftBox">
+        <div class="nimiBox">
+          <h1><a href="avalehtEST.html">Karl Kaarel Taniel Seppel</a></h1>
+        </div>
+        <div class="ametBox">
+          <h5>Noorem tarkvaraarendaja</h5>
+        </div>
+      </div>
+      <div class="rightBox">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="carousel">
+          <a href="https://github.com/KaareI/MyProjects/tree/main/Gambling" target="_blank"><img class="slides"
+              src="/CarouselImages/GambleGame.png"></a>
+          <a href="https://github.com/KaareI/MyProjects/tree/main/TicTacToe" target="_blank"><img class="slides"
+              src="/CarouselImages/TicTacToe.png"></a>
+        </div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+    <!-- ABOUT ME -->
+    <div id="aboutMe">
+      <h2>Minu hobid</h2>
+      <div id="squareContainer">
+        <div id="square1" class="square">
+          <p>Kliki</p>
+        </div>
+        <div id="square2" class="square hidden">
+          <p>Aktsiad</p>
+        </div>
+        <div id="square3" class="square hidden">
+          <p>Jõusaal</p>
+        </div>
+        <div id="square4" class="square hidden">
+          <p>Programmeerimine</p>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT -->
+    <div id="contactMe">
+      <h2>Võta ühendust</h2>
+      <div class="contactContainer">
+        <div class="leftSide">
+          <a href="https://www.facebook.com/karl.seppel.5/" target="_blank">
+            <div class="contactCard" id="leftCard">
+              <h4>Facebook</h4><i class="fa-brands fa-facebook fa-7x"></i>
+            </div>
+          </a>
+        </div>
+        <div class="rightSide">
+          <div class="contactCard" id="rightCard"><i class="fa-solid fa-envelope fa-7x"></i>
+            <h4>Gmail</h4>
+            <p>k.seppel@voco.ee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <h4>&copy; Kõik Õigused on Kaitstud</h4>
+    </footer>
+  </section>
+  <script>
+    // LOADING LOGO
+    const logoLoader = setTimeout(Loading, 3400);
+    function Loading() {
+      $(".loadingLogo").fadeOut(1500);
+      $("body").removeClass("preload");
+    };
+    // CAROUSEL
+    var slideIndex = 1;
+    var slides = document.getElementsByClassName("slides");
+    var timer;
+
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      clearTimeout(timer);
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      clearTimeout(timer);
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+
+      timer = setTimeout(function () {
+        plusSlides(1);
+      }, 4000);
+    }
+
+    // Stop carousel on hover
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].onmouseover = function () {
+        clearTimeout(timer);
+      }
+      slides[i].onmouseout = function () {
+        showSlides(slideIndex + 1);
+      }
+    }
+  </script>
+  <script src="/JavaScript/main.js"></script>
+</body>
+
+</html>
