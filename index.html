@@ -1,25 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="et">
 
 <head>
+
+  <!-- SEARCH -->
   <meta charset="UTF-8">
   <meta name="description" content="Noorem tarkvaraarendaja, tutvu minu e-portfoolioga" />
   <meta name="keywords"
     content="Karl Kaarel Taniel Seppel, Karl Kaarel, Karl Kaarel Taniel, Seppel, portfoolio, e-portfoolio" />
   <meta name="author" content="Karl Kaarel Taniel Seppel">
+
+  <!-- COMPABALITY -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- STYLE -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/4b19ed377c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="avaleht.css">
   <link rel="stylesheet" href="combined.css">
+
   <title>K.K.T.Seppel E-Portfoolio</title>
+
 </head>
 
 <body class="preload">
+
+
   <!-- LOADING LOGO -->
   <div class="loadingLogo"><img src="Minulogo_animated.svg" /></div>
+
+
   <!-- HOMEPAGE -->
   <section id="homePage">
+
+
     <!-- NAVIGATION BAR -->
     <div class="navbar">
       <a href="index.html"><img id="logoId" src="Minulogo_animated.svg" alt="LOGO"></a>
@@ -37,6 +52,8 @@
             src="https://img.freepik.com/premium-vector/vintage-grunge-uk-flag_1102-1207.jpg?w=2000"></a>
       </div>
     </div>
+
+
     <!-- INTRO AND DONE WORK -->
     <div class="container" id="home">
       <div class="leftBox">
@@ -48,16 +65,23 @@
         </div>
       </div>
       <div class="rightBox">
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <h2>Minu projektid</h2>
         <div class="carousel">
           <a href="https://github.com/KaareI/MyProjects/tree/main/Gambling" target="_blank"><img class="slides"
               src="GambleGame.png"></a>
+          <a href="https://github.com/KaareI/MyProjects/tree/main/Encryptor%26Decryptor" target="_blank"><img
+              class="slides" src="Encryptor&Decryptor.png"></a>
           <a href="https://github.com/KaareI/MyProjects/tree/main/TicTacToe" target="_blank"><img class="slides"
               src="TicTacToe.png"></a>
         </div>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div id="scrollers">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
       </div>
     </div>
+
+
     <!-- ABOUT ME -->
     <div id="aboutMe">
       <h2>Minu hobid</h2>
@@ -76,6 +100,8 @@
         </div>
       </div>
     </div>
+
+
     <!-- CONTACT -->
     <div id="contactMe">
       <h2>Võta ühendust</h2>
@@ -95,11 +121,17 @@
         </div>
       </div>
     </div>
+
+
     <!-- FOOTER -->
     <footer>
       <h4>&copy; Kõik Õigused on Kaitstud</h4>
     </footer>
+
   </section>
+
+
+
   <script>
     // LOADING LOGO
     const logoLoader = setTimeout(Loading, 3400);
@@ -107,6 +139,8 @@
       $(".loadingLogo").fadeOut(1500);
       $("body").removeClass("preload");
     };
+
+
     // CAROUSEL
     var slideIndex = 1;
     var slides = document.getElementsByClassName("slides");
@@ -140,7 +174,8 @@
       }, 4000);
     }
 
-    // Stop carousel on hover
+
+    // STOP CAROUSEL ON HOVER
     for (var i = 0; i < slides.length; i++) {
       slides[i].onmouseover = function () {
         clearTimeout(timer);
@@ -150,7 +185,9 @@
       }
     }
   </script>
+
   <script src="main.js"></script>
+
 </body>
 
 </html>

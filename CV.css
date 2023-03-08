@@ -1,8 +1,14 @@
+/* WHOLE CV PAGE CONTENT BOX */
+
 #cvPage {
     margin-top: 6vh;
     height: 100vh;
     width: 90vw;
 }
+
+
+
+/*  GENERAL TEXT CONFIGURATIONS */
 
 #cvPage h3 {
     font-size: 2em;
@@ -22,13 +28,9 @@
     line-height: 1.4em;
 }
 
-.character {
-    height: 15vh;
-}
 
-.character p {
-    padding: 0.5em;
-}
+
+/* BIG CONTENT BOXES */
 
 .contentBox {
     display: flex;
@@ -39,10 +41,14 @@
     border-top: none;
 }
 
+/* HEADING BOX */
+
 .headingBox {
     width: 15vw;
     height: 20vh;
 }
+
+/* TEXT BOXES */
 
 .textBox {
     width: 85vw;

@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* GENERAL CLASSES */
 
 body {
@@ -30,11 +32,15 @@ li {
     font-size: 3em;
 }
 
+
+
 /* TEMPORARY CLASSES */
 
 .preload {
     overflow: hidden;
 }
+
+
 
 /* WEBSITE LOADING */
 
@@ -53,6 +59,8 @@ li {
     height: 70vh;
     width: 70vw;
 }
+
+
 
 /* SCROLLBAR */
 
@@ -80,6 +88,8 @@ li {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+
+
 /* NAVBAR */
 
 .navbar {
@@ -87,6 +97,8 @@ li {
     justify-content: space-between;
     border-bottom: 4px solid white;
 }
+
+
 
 /* LOGO */
 
@@ -103,6 +115,8 @@ li {
     transition-duration: 1.5s;
 }
 
+
+
 /* MENU */
 
 .navMenu {
@@ -117,11 +131,17 @@ li {
     cursor: pointer;
 }
 
+
+
+/* SHORTCUTS */
+
 ul {
     margin: 0;
     padding: 0;
     display: flex;
 }
+
+/* INDIVIDUAL SHORTCUT */
 
 ul li {
     list-style: none;
@@ -144,6 +164,8 @@ ul:hover li a {
     opacity: 0.2;
     filter: blur(5px);
 }
+
+/* SHORTCUT HOVERING */
 
 ul li a:hover {
     transform: scale(2);
@@ -173,6 +195,10 @@ ul li a:hover:before {
     transform: scaleX(1);
 }
 
+
+
+/* CURRENT PAGE AND LANGUAGE BOX */
+
 .pageTop {
     display: flex;
     flex-direction: column;
@@ -190,11 +216,15 @@ ul li a:hover:before {
     transition: 0.5s;
 }
 
+/* LANGUAGE PICTURE */
+
 .pageTop img {
     width: 4em;
     height: 2em;
     margin: 1em;
 }
+
+
 
 /* FOOTER */
 

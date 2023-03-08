@@ -6,6 +6,8 @@
     width: 90vw;
 }
 
+
+
 /* INTRO */
 
 .container {
@@ -13,6 +15,10 @@
     height: 77vh;
     display: flex;
 }
+
+
+
+/* LEFT SIDE */
 
 .leftBox {
     width: 40%;
@@ -33,14 +39,27 @@
     padding: 0.9em;
 }
 
+
+
+/* RIGHT SIDE */
+
 .rightBox {
     width: 60%;
     height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
+.rightBox h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+
+
+/* CAROUSEL */
 
 .carousel {
     width: 70%;
@@ -62,38 +81,25 @@
     border-radius: 4%;
 }
 
-/* Style for the "previous" and "next" buttons */
+
+
+/* "PREVIOUS" AND "NEXT" BOX AND BUTTONS */
+
+#scrollers {
+    margin-top: 1em;
+}
+
 .prev,
 .next {
     cursor: pointer;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
+    padding: 20px;
     color: white;
     font-weight: bold;
     font-size: 24px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
 }
 
-/* Style for the dots/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
 
-.active,
-.dot:hover {
-    background-color: #717171;
-}
 
 /* ABOUT ME */
 
@@ -115,6 +121,10 @@
     text-align: center;
     transition: all 1.5s ease-in-out;
 }
+
+
+
+/* SQUARES */
 
 #squareContainer {
     display: flex;
@@ -197,6 +207,8 @@
     visibility: hidden;
 }
 
+
+
 /* CONTACT */
 
 #contactMe h2 {
@@ -216,6 +228,10 @@
     height: 70vh;
     display: flex;
 }
+
+
+
+/* LEFT BOX */
 
 .leftSide {
     width: 50vw;
@@ -244,6 +260,10 @@
     margin-left: 16px;
 }
 
+
+
+/* RIGHT BOX */
+
 .rightSide {
     width: 50vw;
     height: 50vh;
@@ -267,6 +287,10 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+
+
+/* CARD STYLE */
 
 .contactCard {
     background-color: white;
