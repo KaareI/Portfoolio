@@ -34,34 +34,6 @@ li {
 
 
 
-/* TEMPORARY CLASSES */
-
-.preload {
-    overflow: hidden;
-}
-
-
-
-/* WEBSITE LOADING */
-
-.loadingLogo {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-
-.loadingLogo img {
-    height: 70vh;
-    width: 70vw;
-}
-
-
-
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {

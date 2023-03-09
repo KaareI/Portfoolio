@@ -1,9 +1,77 @@
+// LOADING LOGO
+function Loading() {
+    $(".loadingLogo").fadeOut(1500);
+    $("body").removeClass("preload");
+        // Set a flag in localStorage to indicate that the animation has played
+    sessionStorage.setItem("animationPlayed", "true");
+}
+
+    // Check if the animation has already played by reading the flag from localStorage
+if (sessionStorage.getItem("animationPlayed") === "true") {
+
+        // If the animation has played, hide the loading logo immediately
+    $(".loadingLogo").hide();
+    $("body").removeClass("preload");
+} else {
+    
+        // If the animation hasn't played yet, wait for it to finish before hiding the loading logo
+    const logoLoader = setTimeout(Loading, 3400);
+}
+
+
+
 // LOGO ON HOVER ANIMATE
 const logo = document.getElementById("logoId");
 function hoverfunc() {
     logo.src += "?v=${new Date().getTime()}";
 }
 logo.addEventListener("mouseover", hoverfunc);
+
+
+
+
+// CAROUSEL
+var slideIndex = 1;
+var slides = document.getElementsByClassName("slides");
+var timer;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    clearTimeout(timer);
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    timer = setTimeout(function () {
+        plusSlides(1);
+    }, 4000);
+}
+
+// STOP CAROUSEL ON HOVER
+for (var i = 0; i < slides.length; i++) {
+    slides[i].onmouseover = function () {
+        clearTimeout(timer);
+    }
+    slides[i].onmouseout = function () {
+        showSlides(slideIndex + 1);
+    }
+}
 
 
 
